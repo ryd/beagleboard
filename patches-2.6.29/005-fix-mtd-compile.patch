@@ -1,0 +1,14 @@
+diff --git a/drivers/mtd/mtdpart.c b/drivers/mtd/mtdpart.c
+index 1de7b40..92f684b 100644
+--- a/drivers/mtd/mtdpart.c
++++ b/drivers/mtd/mtdpart.c
+@@ -18,7 +18,9 @@
+ #include <linux/mtd/mtd.h>
+ #include <linux/mtd/partitions.h>
+ #include <linux/mtd/compatmac.h>
++#ifdef CONFIG_MTD_ROOTFS_SPLIT
+ #include <linux/squashfs_fs.h>
++#endif
+ #include <linux/root_dev.h>
+ 
+ /* Our partition linked list */
