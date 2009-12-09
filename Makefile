@@ -9,15 +9,15 @@ include $(TOPDIR)/rules.mk
 ARCH:=arm
 BOARD:=beagleboard
 BOARDNAME:=beagleboard
-# FEATURES:=jffs2
+FEATURES:=ext2 usb broken
 
-LINUX_VERSION:=2.6.29
+LINUX_VERSION:=2.6.32-rc5
 KERNELNAME:="uImage"
 
 DEVICE_TYPE=developerboard
 
 define Target/Description
-	beagleboard - www.beagleboard.org
+	beagleboard - www.beagleboard.org - omap3 arm
 endef
 
 include $(INCLUDE_DIR)/target.mk
